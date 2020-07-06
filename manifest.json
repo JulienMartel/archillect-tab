@@ -1,16 +1,12 @@
 {
-    "name": "Start Clean New Tab Page Lite",
-    "description": "Open a new tab with a clean & fast ui, no search",
-    "version": "0.2.9",
+    "name": "Archillect Tab",
+    "description": "Open a new tab with Archillect most recent as a background",
+    "version": "0.0.1",
     "manifest_version": 2,
-    "permissions" : ["management", "storage", "topSites"],
+    "permissions" : ["management"],
     "chrome_url_overrides" : {
         "newtab": "newtab.html"
     },
     "content_security_policy": "script-src 'self'; object-src 'self'",
-    "icons": { "48": "icon.png" },
-    "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
-    }
+    "icons": { "48": "icon.png" }
 }
