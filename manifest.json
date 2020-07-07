@@ -1,7 +1,7 @@
 {
     "name": "Archillect Tab",
-    "description": "Open a new tab with Archillect most recent as a background",
-    "version": "0.0.1",
+    "description": "Open a new tab with Archillect's most recent as a background",
+    "version": "1.0",
     "manifest_version": 2,
     "permissions" : ["management"],
     "chrome_url_overrides" : {

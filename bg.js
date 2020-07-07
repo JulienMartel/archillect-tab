@@ -1,6 +1,18 @@
-fetch("https://api.unsplash.com/photos/random?client_id=ZwlAH167E4UEIulH5zobX29b8MCvfj1dga_IF0iB2ik").then(res => res.json())
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+const url = "https://archillect.com/api/last/1?token=4817b82d-640a-4ad9-b5db-385412d0745f"
+
+fetch(proxyurl + url).then(res => res.json())
 	.then(result => {
 		console.log(result)
-		const { urls: {full : url} } = result
-		document.querySelector("img").src = url
+		const { image: { original: url } } = result.pop()
+		document.querySelector(".bg").src = url
+		document.querySelector(".logo").style.display = "block"
+		document.body.style.backgroundImage = `url(${url})`
+
 	})
+
+// git clone https://github.com/Rob--W/cors-anywhere.git
+// cd cors-anywhere/
+// npm install
+// heroku create
+// git push heroku master
