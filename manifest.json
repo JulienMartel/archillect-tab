@@ -1,11 +1,15 @@
 {
     "name": "Archillect Tab",
-    "description": "Open a new tab with Archillect's most recent as a background",
+    "description": "Replace your New Tab page with Archillect's most recent picture. Archilliect is an API created my Murat Pak, for finding images.",
     "version": "0.0.1",
     "manifest_version": 2,
     "chrome_url_overrides" : {
         "newtab": "newtab.html"
     },
     "content_security_policy": "script-src 'self'; object-src 'self'",
-    "icons": { "48": "icon.png" }
+    "icons": { 
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
 }
