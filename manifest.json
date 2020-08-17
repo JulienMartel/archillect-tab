@@ -1,10 +1,19 @@
 {
     "name": "Archillect Tab",
-    "description": "Replace your New Tab page with Archillect's most recent picture. Archilliect is an API created my Murat Pak, for finding images.",
-    "version": "0.0.1",
+    "description": "Replace your New Tab page with Archillect's most recent picture. Archilliect is an AI created by Murat Pak.",
+    "version": "0.0.2",
     "manifest_version": 2,
     "chrome_url_overrides" : {
         "newtab": "newtab.html"
+    },
+    "permissions": [
+        "https://sheltered-ravine-15012.herokuapp.com/",
+        "alarms",
+        "storage"
+    ],
+    "background": {
+        "scripts": ["bg.js"],
+        "persistent": false
     },
     "content_security_policy": "script-src 'self'; object-src 'self'",
     "icons": { 
