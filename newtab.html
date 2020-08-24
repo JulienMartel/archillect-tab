@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>New Tab</title>
     <meta charset="utf-8">
@@ -9,14 +8,53 @@
   </head>
   <body>
     <a class="logo" href="https://twitter.com/archillect">
-      <img src="/archillect.svg" width="30px" />
+      <svg width="40px" height="40px">
+        <use xlink:href='/archillect.svg#img'></use>
+      </svg>
     </a>
     <div class="blur">
-      <img unselectable="false" class="bg" src="/archillect.svg" > 
-      <!-- maybe take off unselectable -->
+      <img class="bg" src="/archillect.svg" > 
     </div>
     <div class="credit">
-      <span>Made by <a href="https://twitter.com/jubag__">Jubag</a></span>
+      <a class="button" href="#popup1">
+        <svg width="40px" height="40px">
+          <use xlink:href='/cog.svg#img'></use>
+        </svg>
+      </a>
+    </div>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <div>
+          <h2 style="margin-bottom:5px">Archillect Tab</h2>
+          <span>(<a class="version" href="/newupdate.html">0.0.3</a>)</span>
+        </div>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <div class="settings">
+            <span>⏲️</span>
+            <label class="switch">
+              <input disabled id="option" type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <span>📺</span>
+          </div>
+          <div style="margin: auto;width: max-content;text-align: center;margin-top: -20px;font-size: 14px;">(Coming soonish)</div>
+
+          <div class="support">
+            <span class="twitter">Made with ❤️, by <a href="https://twitter.com/jubag__">Jubag</a></span>
+            <div class="dono-share">
+              <div class="dono"><h3>
+                <style>.bmc-button img{height: 34px !important;width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 15px 7px 10px !important;line-height: 35px !important;height:51px !important;text-decoration: none !important;display:inline-flex !important;color:#000000 !important;background-color:#FFFFFF !important;border-radius: 8px !important;border: 1px solid transparent !important;font-size: 18px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#000000 !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/jubag">🍺<span style="margin-left:5px;font-size:18px !important;">Buy me a beer?</span></a>              </h3></div>
+              <a class="share" href="http://twitter.com/share?text=Chrome%20extention%20to%20show%20@Archillect's%20most%20recent%20post%20on%20your%20new%20tab%20page!&url=https://chrome.google.com/webstore/detail/archillect-tab/lefgpjcahelbhhodfcgbiihdlcajlmma">
+                <h3>Tweet it</h3>
+              </a>
+            </div>
+            <div class="pak">
+              Archillect was created by <a href="https://twitter.com/muratpak">Murat Pak</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <script type="text/javascript" src="index.js"></script>
