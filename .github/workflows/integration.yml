@@ -13,11 +13,11 @@ jobs:
     - name: Release to Github
       run: echo "Release"
     - name: Chrome Extension upload & publish
-      uses: Klemensas/chrome-extension-upload-action@1.4.1
+      uses: Passiverecords/chrome-extension-upload-action@1.4.1
       with:
-        refresh-token: '1//06ApvHrMXh1ZvCgYIARAAGAYSNwF-L9IrwxhEE6Jbwf_CBKiRfMrcTr8dGTgtHZN-AgkoeK2ebXLMhMDNNTdE98laqKqN0Hngrpc'
-        client-id: '924289393866-ub90f5q9r2k0jvlv70aas0v8u8kmumq9.apps.googleusercontent.com'
-        client-secret: 'zYQnvbntPXDcv6G2pY8I_CoX'
-        file-name: './master.zip'
-        app-id: '924289393866'
+        refresh-token: 1//06ApvHrMXh1ZvCgYIARAAGAYSNwF-L9IrwxhEE6Jbwf_CBKiRfMrcTr8dGTgtHZN-AgkoeK2ebXLMhMDNNTdE98laqKqN0Hngrpc
+        client-id: 924289393866-ub90f5q9r2k0jvlv70aas0v8u8kmumq9.apps.googleusercontent.com
+        client-secret: zYQnvbntPXDcv6G2pY8I_CoX
+        file-name: ./master.zip
+        app-id: 924289393866
         publish: true
