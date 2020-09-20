@@ -59,6 +59,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: -1;
 }
 
 
@@ -86,7 +87,6 @@ body {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -103,7 +103,7 @@ body {
   border-radius: 15px;
   width: 40%;
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 1s ease-in-out;
   font-size: 1.5em;
   border: 1px solid #ddd;
 }
