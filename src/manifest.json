@@ -1,7 +1,7 @@
 {
     "name": "Archillect Tab",
     "description": "Replace your New Tab page with Archillect's most recent picture. Archilliect is an AI created by Murat Pak.",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "manifest_version": 2,
     "chrome_url_overrides" : {
         "newtab": "newtab.html"
@@ -20,5 +20,8 @@
         "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png"
-    }
+    },
+    "web_accessible_resources": [
+        "*.json"
+    ]
 }

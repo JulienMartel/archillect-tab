@@ -166,16 +166,12 @@ body {
   border-top: 1px solid #ddd;
   width: 100%;
 }
-
-.dono, .share {
+.share {
   margin: 10px 0;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.share {
   color: #ddd;
   border-left: 1px solid #ddd;
   text-decoration: none;
@@ -183,6 +179,9 @@ body {
 }
 .share:hover {
   text-decoration: #ddd underline;
+}
+.share.left {
+  border: none;
 }
 
 .twitter {
@@ -241,7 +240,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(72, 134, 72);
+  background-color: rgb(64, 145, 64);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -253,13 +252,13 @@ body {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: rgb(151, 151, 151);
+  background-color: rgb(226, 226, 226);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #9e73b8;
+  background-color: plum;
 }
 
 input:focus + .slider {
