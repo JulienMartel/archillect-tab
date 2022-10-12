@@ -7,54 +7,40 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <a class="logo" href="https://twitter.com/archillect">
-      <svg width="40px" height="40px">
-        <use xlink:href='/archillect.svg#img'></use>
+    <a class="logo" href="#popup1">
+      <svg width="22px" height="22px">
+        <use xlink:href='images/archillect.svg#img'></use>
       </svg>
     </a>
     <div class="blur">
-      <img class="bg" src="/archillect.svg" > 
+      <img 
+        class="bg" 
+        src="images/archillect.svg"
+        onerror="this.onerror=null;this.src='images/archillect.svg'"
+      > 
     </div>
-    <div class="credit">
-      <a class="button" href="#popup1">
-        <svg width="40px" height="40px">
-          <use xlink:href='/cog.svg#img'></use>
-        </svg>
-      </a>
-    </div>
-    <div id="popup1" class="overlay">
+    <div id="popup1">
       <div class="popup">
-        <div>
-          <h2 style="margin-bottom:5px">Archillect Tab</h2>
+        <div class="title">
+          <h4>Archillect Tab</h4>
           <span>(<a class="version" href="/newupdate.html">  </a>)</span>
         </div>
+
         <a class="close" href="#">&times;</a>
-        <div class="content">
-          <div class="settings">
-            <span>⏲️</span>
-            <label class="switch">
-              <input id="option" type="checkbox">
-              <span class="slider round"></span>
-            </label>
-            <span>📺</span>
-          </div>
-          <div class="support">
-            <span class="twitter">Made with ❤️ by <a href="https://twitter.com/jubag__">Jubag</a></span>
-            <div class="dono-share">
-              <a class="share left" href="https://twetch.app/compose?description=Chrome%20extention%20to%20show%20@2877%20's%20most%20recent%20image%20on%20your%20new%20tab%20page%0D%0Ahttps%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Farchillect-tab%2Flefgpjcahelbhhodfcgbiihdlcajlmma">
-                <h3>Twetch it</h3>
-              </a>
-              <a class="share" href="http://twitter.com/share?text=Chrome%20extension%20to%20show%20@Archillect's%20most%20recent%20post%20on%20your%20new%20tab%20page!&url=https://chrome.google.com/webstore/detail/archillect-tab/lefgpjcahelbhhodfcgbiihdlcajlmma">
-                <h3>Tweet it</h3>
-              </a>
-            </div>
-            <div class="pak">
-              Archillect was created by <a href="https://twitter.com/muratpak">Murat Pak</a>
-            </div>
-          </div>
+
+        <div class="pak">
+          <a href="https://twitter.com/archillect">Archillect</a> was created by 
+          <a href="https://twitter.com/muratpak">Murat Pak</a>
         </div>
+        
+        <!-- <a class="share" href="http://twitter.com/share?text=Chrome%20extension%20to%20show%20@Archillect's%20most%20recent%20post%20on%20your%20new%20tab%20page!&url=https://chrome.google.com/webstore/detail/archillect-tab/lefgpjcahelbhhodfcgbiihdlcajlmma">
+          Tweet it
+        </a> -->
+        
+        <span class="twitter">Made with ❤️ by <a href="https://twitter.com/jubag__">ju</a></span>
+
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
 </html>

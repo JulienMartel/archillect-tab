@@ -4,11 +4,11 @@ const setVersionTag = version => {
 
 const url = chrome.runtime.getURL('./data.json');
 fetch(url)
-.then((response) => response.json()) //assuming file contains json
-.then(({updates}) => {
-  renderInfo(updates)
-  setVersionTag(updates[0].version)
-})
+  .then((response) => response.json())
+  .then(({updates}) => {
+    renderInfo(updates)
+    setVersionTag(updates[0].version)
+  })
 
 
 const renderInfo = updates => {

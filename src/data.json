@@ -1,6 +1,18 @@
 {
   "updates": [
     {
+      "version": "0.9.0",
+      "whatsNew": [
+        "Created unofficial Archillect API so no more API costs",
+        "Moved API (used to be the proxy) off Heroku since they no longer offer free hosting",
+        "Removed TV option",
+        "Removed settings cog"
+      ],
+      "means": [
+        "We're back baby😎"
+      ]
+    },
+    {
       "version": "0.1.0",
       "whatsNew": [
         "Archillect TV option📺",
