@@ -26,22 +26,6 @@ fetch(url)
   })
 
 
-// chrome.storage.local.get(['tv'], ({tv}) => {
-//   if (tv) {
-//     chrome.alarms.get("tv", alarm => {
-//       if (!alarm) {
-//         chrome.alarms.create("tv", {periodInMinutes: 1, when: Date.now() + 1})
-//       }
-//     })
-//   } else {
-//     chrome.alarms.get("getNewImg", alarm => {
-//       if (!alarm) {
-//         chrome.alarms.create("getNewImg", {periodInMinutes: 3, when: Date.now() + 1})
-//       }
-//     })
-//   }
-// });
-
 
 const bg = $(".bg")
 const logo = $(".logo")
@@ -49,29 +33,16 @@ const setNewImg = url => {
   document.body.style.backgroundImage = `url(${url})`
   bg.src = url
   logo.style.display = "block"
-  // $(".overlay").style.transition = "opacity 500ms"
 }
 
-// const setTvTimer = () => {
-//   setInterval(() => {
-//     fetch("https://sheltered-ravine-15012.herokuapp.com/tv").then(res => res.text())
-//       .then(tvUrl => {
-//         setNewImg(tvUrl)
-//         chrome.storage.local.set({ tvUrl })
-//       })
-//   }, 6000);
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-  chrome.storage.local.get(['src'], ({src}) => {
-    if (src) {
+chrome.storage.local.get(['src'], ({src}) => {
+  if (src) {
+    setNewImg(src)
+  } else {
+    fetch("https://archillect-recent.vercel.app").then(res => res.json())
+    .then(({src}) => {
       setNewImg(src)
-    } else {
-      fetch("https://archillect-recent.vercel.app").then(res => res.json())
-      .then(({src}) => {
-        setNewImg(src)
-        chrome.storage.local.set({ src })
-      })
-    }
-  });
-// });
+      chrome.storage.local.set({ src })
+    })
+  }
+});
