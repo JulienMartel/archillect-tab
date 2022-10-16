@@ -5,7 +5,7 @@ chrome.alarms.get("getNewImg", alarm => {
 })
 
 chrome.alarms.onAlarm.addListener(() => {
-	fetch("https://archillect-recent.vercel.app")
-		.then(res => res.json())
+  fetch("https://archillect-recent.vercel.app")
+    .then(res => res.json())
 		.then(({ src }) => chrome.storage.local.set({ src }))
 })

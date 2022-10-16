@@ -39,10 +39,11 @@ chrome.storage.local.get(['src'], ({src}) => {
   if (src) {
     setNewImg(src)
   } else {
-    fetch("https://archillect-recent.vercel.app").then(res => res.json())
-    .then(({src}) => {
-      setNewImg(src)
-      chrome.storage.local.set({ src })
-    })
+    fetch("https://archillect-recent.vercel.app")
+      .then(res => res.json())
+      .then(({ src }) => {
+        setNewImg(src)
+        chrome.storage.local.set({ src })
+      })
   }
-});
+})
