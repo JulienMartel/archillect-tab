@@ -1,32 +1,29 @@
 {
-    "name": "Archillect Tab",
-    "description": "Replace your New Tab page with Archillect's most recent picture. Archilliect is an AI created by Murat Pak.",
-    "version": "1.0.0",
-    "manifest_version": 3,
-    "chrome_url_overrides" : {
-        "newtab": "newtab.html"
-    },
-    "permissions": [
-        "alarms",
-        "storage"
-    ],
-    "background": {
-        "service_worker": "scripts/bg.js",
-        "type": "module"
-    },
-    "content_security_policy": {
-        "script-src": "self",
-        "object-src": "self"
-    },
-    "icons": { 
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-    },
-    "web_accessible_resources": [
-        {
-        "resources": ["data.json"],
-        "extension_ids": ["lefgpjcahelbhhodfcgbiihdlcajlmma"]
-        }
-    ]
+  "name": "Archillect Tab",
+  "description": "Replace your New Tab page with Archillect's most recent picture. Archilliect is an AI created by Murat Pak.",
+  "version": "1.4.9",
+  "manifest_version": 3,
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["alarms", "storage"],
+  "background": {
+    "service_worker": "scripts/bg.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "script-src": "self",
+    "object-src": "self"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["data.json"],
+      "extension_ids": ["lefgpjcahelbhhodfcgbiihdlcajlmma"]
+    }
+  ]
 }

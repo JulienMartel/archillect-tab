@@ -1,14 +1,17 @@
 {
   "updates": [
     {
+      "version": "1.4.9",
+      "whatsNew": ["Just backend stuff 👨‍💻. Created a better Archillect API"],
+      "means": ["TV option coming back eventually"]
+    },
+    {
       "version": "1.0.0",
       "whatsNew": [
         "Some UI fixes",
         "Now saves base64 URL of image to local storage so it doeant have to load from the img src every time"
       ],
-      "means": [
-        "Even faster img load times"
-      ]
+      "means": ["Even faster img load times"]
     },
     {
       "version": "0.9.0",
@@ -18,9 +21,7 @@
         "Removed TV option",
         "Removed settings cog"
       ],
-      "means": [
-        "We're back baby😎"
-      ]
+      "means": ["We're back baby😎"]
     },
     {
       "version": "0.1.0",
@@ -51,9 +52,7 @@
         "Timer to fetch new image runs more often",
         "Small UI changes"
       ],
-      "means": [
-        "More up-to-date with the most recent image⏲️"
-      ]
+      "means": ["More up-to-date with the most recent image⏲️"]
     },
     {
       "version": "0.0.2",

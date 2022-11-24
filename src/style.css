@@ -1,8 +1,10 @@
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   background-color: #222222;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .bg {
@@ -52,7 +54,6 @@ body {
   z-index: -1;
 }
 
-
 /*/////////////////////////////// POPUP ////////////////////////////*/
 #popup1 {
   position: absolute;
@@ -68,14 +69,11 @@ body {
 }
 
 .popup {
-  /* margin: 70px auto; */
   padding: 10px 12px;
   background: #303443;
   color: #ddd;
-  /* border-radius: 10px; */
   min-width: 250px;
   max-width: 400px;
-  /* position: relative; */
   transition: all 0.2s ease-in-out;
   font-size: 1.5em;
 }
@@ -121,9 +119,8 @@ body {
   color: #ddd;
 }
 
-.twitter a, .pak a {
+.twitter a,
+.pak a {
   color: #ddd;
   text-decoration: #ddd underline;
 }
-
-
