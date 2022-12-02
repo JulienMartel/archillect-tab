@@ -1,6 +1,18 @@
 {
   "updates": [
     {
+      "version": "1.6.0",
+      "whatsNew": [
+        "Bug fixes to make it work with new API",
+        "added github link",
+        "added donation options"
+      ],
+      "means": [
+        "Everything back to normal🤗",
+        "Please donate if you enjoy my free work😎, thank you the few current supporters🥰"
+      ]
+    },
+    {
       "version": "1.5.0",
       "whatsNew": ["Bug fixes"],
       "means": ["Works properly lol"]

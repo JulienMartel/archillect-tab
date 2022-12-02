@@ -10,5 +10,5 @@ chrome.alarms.get("getNewImg", (alarm) => {
 chrome.alarms.onAlarm.addListener(() => {
   fetch("https://unofficial-archillect-api.vercel.app/recent/1")
     .then((res) => res.json())
-    .then(({ src }) => chrome.storage.local.set({ src }));
+    .then(([{ src }]) => chrome.storage.local.set({ src }));
 });

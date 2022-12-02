@@ -124,3 +124,12 @@ body {
   color: #ddd;
   text-decoration: #ddd underline;
 }
+
+.links {
+  padding: 4px 0;
+}
+.links a {
+  color: #ddd;
+  text-decoration: #ddd underline;
+  margin-right: 4px;
+}

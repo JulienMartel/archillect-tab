@@ -39,7 +39,7 @@ chrome.storage.local.get(["src"], ({ src }) => {
   } else {
     fetch("https://unofficial-archillect-api.vercel.app/recent/1")
       .then((res) => res.json())
-      .then(({ src }) => {
+      .then(([{ src }]) => {
         setNewImg(src);
         chrome.storage.local.set({ src });
       });
