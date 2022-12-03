@@ -1,6 +1,11 @@
 {
   "updates": [
     {
+      "version": "1.6.9",
+      "whatsNew": ["Storing images as base 64 so they show up faster"],
+      "means": ["FASTER 🏎"]
+    },
+    {
       "version": "1.6.0",
       "whatsNew": [
         "Bug fixes to make it work with new API",
@@ -8,8 +13,8 @@
         "added donation options"
       ],
       "means": [
-        "Everything back to normal🤗",
-        "Please donate if you enjoy my free work😎, thank you the few current supporters🥰"
+        "Everything back to normal 🤗",
+        "Please donate if you enjoy my free work, thank you the few current supporters 🥰"
       ]
     },
     {

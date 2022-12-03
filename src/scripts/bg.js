@@ -8,7 +8,7 @@ chrome.alarms.get("getNewImg", (alarm) => {
 });
 
 chrome.alarms.onAlarm.addListener(() => {
-  fetch("https://unofficial-archillect-api.vercel.app/recent/1")
+  fetch("https://archillect-api.jubag.dev/recent/1?b64=true")
     .then((res) => res.json())
     .then(([{ src }]) => chrome.storage.local.set({ src }));
 });

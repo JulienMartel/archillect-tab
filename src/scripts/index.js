@@ -37,7 +37,7 @@ chrome.storage.local.get(["src"], ({ src }) => {
   if (src) {
     setNewImg(src);
   } else {
-    fetch("https://unofficial-archillect-api.vercel.app/recent/1")
+    fetch("https://archillect-api.jubag.dev/recent/1?b64=true")
       .then((res) => res.json())
       .then(([{ src }]) => {
         setNewImg(src);
