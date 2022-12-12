@@ -1,6 +1,13 @@
 {
   "updates": [
     {
+      "version": "2.0.2",
+      "whatsNew": ["Bug fixes"],
+      "means": [
+        "For it to continue working, you must now insert a license key, you can get it from gumroad (link at top of page, use discount code 'early' for 100% off forever)"
+      ]
+    },
+    {
       "version": "2.0.0",
       "whatsNew": [
         "Archillect tab is moving to a paid model, but I'm mkaing it free for anyone who has it now! Use discount code 'early' to get 100% off."

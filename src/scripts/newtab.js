@@ -22,6 +22,8 @@ const getKey = () => {
   });
 };
 
+getKey();
+
 chrome.storage.local.get(["src"], async ({ src }) => {
   if (src) setNewImg(src);
   else {
