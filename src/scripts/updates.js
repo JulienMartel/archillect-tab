@@ -1,8 +1,10 @@
+// @ts-nocheck
+
 const setVersionTag = (version) => {
   document.querySelector(".version").textContent = version;
 };
 
-const url = chrome.runtime.getURL("./data.json");
+const url = chrome.runtime.getURL("../updates.json");
 fetch(url)
   .then((response) => response.json())
   .then(({ updates }) => {

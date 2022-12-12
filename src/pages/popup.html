@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      body {
+        padding: 10px 12px;
+        background: #303443;
+        color: #ddd;
+        min-width: 250px;
+        max-width: 400px;
+        transition: all 0.2s ease-in-out;
+        font-size: 1.3em;
+      }
+
+      #key_entered {
+        display: none;
+      }
+
+      button {
+        background: transparent;
+        color: #ddd;
+        border: 2px solid #ddd;
+        padding: 5px 12px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      input {
+        background: transparent;
+        color: #ddd;
+        border: 2px solid #ddd;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 1rem;
+        width: "100%";
+        margin-bottom: 10px;
+      }
+
+      .info {
+        font-size: 0.8em;
+        margin-top: 10px;
+      }
+
+      a {
+        color: #ddd;
+        text-decoration: underline #ddd;
+        font-weight: 700;
+      }
+    </style>
+    <title>License key</title>
+  </head>
+  <body>
+    <div id="key_needed" style="width: 100%">
+      <p>To get started, add your license key from Gumroad!</p>
+      <p class="info">
+        You can get your license key by subscrbribing to
+        <a target="_blank" href="https://jubag.gumroad.com/l/aw"
+          >this product on gumroad.com</a
+        >
+      </p>
+      <h3>
+        Use discount code 'early' for 100% off forever <3 (only 100 codes
+        available)
+      </h3>
+      <input placeholder="License Key" id="key_input" />
+      <button id="save_key_button">Add key</button>
+    </div>
+    <div id="key_entered" style="width: 100%">
+      <p>You entered your license key, you can close this page</p>
+
+      <button id="change_key_button">Change key</button>
+    </div>
+  </body>
+  <script src="../scripts/popup.js"></script>
+</html>

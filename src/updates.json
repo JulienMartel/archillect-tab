@@ -1,6 +1,15 @@
 {
   "updates": [
     {
+      "version": "2.0.0",
+      "whatsNew": [
+        "Archillect tab is moving to a paid model, but I'm mkaing it free for anyone who has it now! Use discount code 'early' to get 100% off."
+      ],
+      "means": [
+        "You need to enter a license key to use the extension, you can get it from going to the gumroad link at the top of this page. Enter your license key in the popup that shows up when you click the extension icon. If you have any questions, please email me at julienbmartel@gmail.com."
+      ]
+    },
+    {
       "version": "1.6.9",
       "whatsNew": ["Storing images as base 64 so they show up faster"],
       "means": ["FASTER 🏎"]
