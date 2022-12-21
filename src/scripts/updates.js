@@ -16,15 +16,15 @@ const renderInfo = (updates) => {
   const cont = document.querySelector(".cont");
   updates.forEach(({ version, whatsNew, means }, i) => {
     const h2 = document.createElement("H2");
-    h2.innerText = `Version ${version + (i == 0 ? " 🎊" : "")}`;
+    h2.innerText = `${version + (i == 0 ? " 🎊" : "")}`;
     const h3 = document.createElement("H3");
     h3.innerText = "Whats new?";
     const ul = document.createElement("UL");
 
     whatsNew.forEach((n) => {
-      const x = document.createElement("LI");
-      x.innerText = n;
-      ul.appendChild(x);
+      const li = document.createElement("LI");
+      li.innerText = n;
+      ul.appendChild(li);
     });
     cont.appendChild(h2);
     cont.appendChild(h3);

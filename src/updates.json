@@ -1,6 +1,17 @@
 {
   "updates": [
     {
+      "version": "2.1.0",
+      "whatsNew": [
+        "General bug fixes and UI improvements",
+        "All the 100% off coupon codes are used 😱"
+      ],
+      "means": [
+        "Better support",
+        "Contact me personally if you want free access to the extension, I'll give you a code."
+      ]
+    },
+    {
       "version": "2.0.2",
       "whatsNew": ["Bug fixes"],
       "means": [

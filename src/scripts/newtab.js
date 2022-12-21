@@ -1,13 +1,10 @@
 // @ts-nocheck
 const $ = (query) => document.querySelector(query);
 
-const bg = $(".bg");
-const logo = $(".logo");
-
 const setNewImg = (src) => {
   document.body.style.backgroundImage = `url(${src})`;
-  bg.src = src;
-  logo.style.display = "block";
+  $(".bg").src = src;
+  $(".logo").style.display = "block";
 };
 
 const getKey = () => {
@@ -15,28 +12,24 @@ const getKey = () => {
     chrome.storage.local.get(["key"], ({ key }) => {
       if (key) resolve(key);
       else {
-        chrome.tabs.create({ url: "../pages/popup.html" });
+        console.log("no key");
         resolve(false);
       }
     });
   });
 };
 
-getKey();
-
 chrome.storage.local.get(["src"], async ({ src }) => {
   if (src) setNewImg(src);
   else {
     const key = await getKey();
 
+    if (!key) return;
+
     try {
-      const res = await fetch(
-        "https://api.aw.jubag.dev/recent/1?b64=true",
-        // "https://archillect-tab-m4di9eizm-jubag.vercel.app/recent/1?b64=true",
-        {
-          headers: { "x-api-key": key || "" },
-        }
-      );
+      const res = await fetch("https://api.aw.jubag.dev/recent/1?b64=true", {
+        headers: { "x-api-key": key },
+      });
       const json = await res.json();
 
       const [{ src }] = json;
@@ -48,3 +41,10 @@ chrome.storage.local.get(["src"], async ({ src }) => {
     }
   }
 });
+
+fetch(chrome.runtime.getURL("../updates.json"))
+  .then((response) => response.json())
+  .then(({ updates }) => {
+    const { version = "0.0.0" } = updates[0];
+    $("a.version").textContent = version;
+  });

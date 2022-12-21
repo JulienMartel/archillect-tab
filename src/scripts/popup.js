@@ -1,8 +1,8 @@
 // @ts-nocheck
 const checkForKey = () => {
-  return new Promise((resolve, reject) => {
-    chrome.storage.local.get(["key"], (result) => {
-      resolve(result["key"]);
+  return new Promise((resolve) => {
+    chrome.storage.local.get(["key"], ({ key }) => {
+      resolve(key);
     });
   });
 };

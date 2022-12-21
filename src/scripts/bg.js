@@ -10,12 +10,31 @@ chrome.alarms.get("getNewImg", (alarm) => {
   });
 });
 
+//show new updates
+chrome.runtime.onInstalled.addListener(({ reason }) => {
+  const { UPDATE, INSTALL } = chrome.runtime.OnInstalledReason;
+
+  if (reason === UPDATE) {
+    chrome.tabs.create({
+      url: "../pages/newupdate.html",
+    });
+  } else if (reason === INSTALL) {
+    chrome.tabs.create({
+      url: "../pages/popup.html",
+    });
+  }
+});
+
+// for fast-updating
+chrome.runtime.onUpdateAvailable.addListener(() => chrome.runtime.reload());
+
 const getKey = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     chrome.storage.local.get(["key"], ({ key }) => {
       if (key) resolve(key);
       else {
         console.log("no key");
+        resolve(false);
       }
     });
   });
@@ -24,14 +43,12 @@ const getKey = () => {
 chrome.alarms.onAlarm.addListener(async () => {
   const key = await getKey();
 
+  if (!key) return;
+
   try {
-    const res = await fetch(
-      "https://api.aw.jubag.dev/recent/1?b64=true",
-      // "https://archillect-tab-m4di9eizm-jubag.vercel.app/recent/1?b64=true",
-      {
-        headers: { "x-api-key": key || "" },
-      }
-    );
+    const res = await fetch("https://api.aw.jubag.dev/recent/1?b64=true", {
+      headers: { "x-api-key": key },
+    });
     const [{ src }] = await res.json();
 
     chrome.storage.local.set({ src });
