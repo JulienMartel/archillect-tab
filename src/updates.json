@@ -1,6 +1,11 @@
 {
   "updates": [
     {
+      "version": "2.2.0",
+      "whatsNew": ["Change t0 /random"],
+      "means": ["Archillect stopped posting"]
+    },
+    {
       "version": "2.1.0",
       "whatsNew": [
         "General bug fixes and UI improvements",
