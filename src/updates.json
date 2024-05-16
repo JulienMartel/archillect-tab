@@ -1,6 +1,11 @@
 {
   "updates": [
     {
+      "version": "2.2.1",
+      "whatsNew": ["Oops, fix endpoint typo"],
+      "means": ["Working again"]
+    },
+    {
       "version": "2.2.0",
       "whatsNew": ["Change t0 /random"],
       "means": ["Archillect stopped posting"]

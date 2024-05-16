@@ -27,12 +27,12 @@ chrome.storage.local.get(["src"], async ({ src }) => {
     if (!key) return;
 
     try {
-      const res = await fetch("https://api.aw.jubag.dev/random/1?b64=true", {
+      const res = await fetch("https://api.aw.jubag.dev/random?b64=true", {
         headers: { "x-api-key": key },
       });
       const json = await res.json();
 
-      const [{ src }] = json;
+      const { src } = json;
 
       setNewImg(src);
       chrome.storage.local.set({ src });

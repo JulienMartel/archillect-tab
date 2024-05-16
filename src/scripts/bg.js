@@ -46,10 +46,10 @@ chrome.alarms.onAlarm.addListener(async () => {
   if (!key) return;
 
   try {
-    const res = await fetch("https://api.aw.jubag.dev/random/1?b64=true", {
+    const res = await fetch("https://api.aw.jubag.dev/random?b64=true", {
       headers: { "x-api-key": key },
     });
-    const [{ src }] = await res.json();
+    const { src } = await res.json();
 
     chrome.storage.local.set({ src });
   } catch (err) {
